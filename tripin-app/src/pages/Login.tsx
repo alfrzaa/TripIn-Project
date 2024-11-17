@@ -17,7 +17,7 @@ const Login = () => {
         <div className="flex space-x-8">
           <button
             className={`flex-1 py-3 text-center rounded-t-[30px] rounded-b-none ${
-              isSignIn ? "bg-white text-black" : "bg-transparent text-black"
+              isSignIn ? "bg-white text-black" : "bg-transparent text-white"
             }`}
             onClick={() => setIsSignIn(true)}
           >
@@ -25,7 +25,7 @@ const Login = () => {
           </button>
           <button
             className={`flex-1 py-3 text-center rounded-t-[30px] rounded-b-none ${
-              !isSignIn ? "bg-white text-black" : "bg-transparent text-black"
+              !isSignIn ? "bg-white text-black" : "bg-transparent text-white"
             }`}
             onClick={() => setIsSignIn(false)}
           >
