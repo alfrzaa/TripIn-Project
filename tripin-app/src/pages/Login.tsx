@@ -16,20 +16,16 @@ const Login = () => {
         {/* Toggle Buttons */}
         <div className="flex space-x-8">
           <button
-            className={`flex-1 py-3 text-center rounded-t-3xl  ${
-              isSignIn
-                ? "bg-white text-black"
-                : "bg-transparent text-black"
+            className={`flex-1 py-3 text-center rounded-t-[30px] rounded-b-none ${
+              isSignIn ? "bg-white text-black" : "bg-transparent text-black"
             }`}
             onClick={() => setIsSignIn(true)}
           >
             Sign In
           </button>
           <button
-            className={`flex-1 py-3 text-center rounded-t-3xl ${
-              !isSignIn
-                ? "bg-white text-black"
-                : "bg-transparent text-black"
+            className={`flex-1 py-3 text-center rounded-t-[30px] rounded-b-none ${
+              !isSignIn ? "bg-white text-black" : "bg-transparent text-black"
             }`}
             onClick={() => setIsSignIn(false)}
           >
