@@ -6,36 +6,34 @@ const Login = () => {
   const [isSignIn, setIsSignIn] = useState(true);
 
   return (
-    <div className="min-h-screen bg-primary">
+    <div className="min-h-screen bg-primary flex flex-col">
       {/* Logo Container */}
-      <div className="px-6 pt-6">
-        <div className="flex justify-center mb-2">
-          <img src={tripinLogo} className="h-40" alt="Logo of TripIn" />
-        </div>
+      <div className="flex justify-center pt-6">
+        <img src={tripinLogo} className="h-40" alt="Logo of TripIn" />
+      </div>
 
-        {/* Toggle Buttons */}
-        <div className="flex space-x-8">
-          <button
-            className={`flex-1 py-3 text-center rounded-t-[30px] rounded-b-none ${
-              isSignIn ? "bg-white text-black" : "bg-transparent text-white"
-            }`}
-            onClick={() => setIsSignIn(true)}
-          >
-            Sign In
-          </button>
-          <button
-            className={`flex-1 py-3 text-center rounded-t-[30px] rounded-b-none ${
-              !isSignIn ? "bg-white text-black" : "bg-transparent text-white"
-            }`}
-            onClick={() => setIsSignIn(false)}
-          >
-            Sign Up
-          </button>
-        </div>
+      {/* Toggle Buttons */}
+      <div className="flex w-full">
+        <button
+          className={`flex-1 py-3 text-center rounded-t-[30px] rounded-b-none ${
+            isSignIn ? "bg-white text-black" : "bg-transparent text-white"
+          }`}
+          onClick={() => setIsSignIn(true)}
+        >
+          Sign In
+        </button>
+        <button
+          className={`flex-1 py-3 text-center rounded-t-[30px] rounded-b-none ${
+            !isSignIn ? "bg-white text-black" : "bg-transparent text-white"
+          }`}
+          onClick={() => setIsSignIn(false)}
+        >
+          Sign Up
+        </button>
       </div>
 
       {/* Form Container */}
-      <div className="bg-white flex-1 p-6 px-6 pb-6 min-h-[calc(100vh-240px)]">
+      <div className="bg-white flex-1 p-6 min-h-[calc(100vh-240px)]">
         <div className="max-w-md mx-auto">
           <h2 className="text-lg font-medium mb-6 text-black">
             {isSignIn ? "Login to your Account" : "Create your Account"}
